@@ -16,7 +16,15 @@ const getStyleName = btn => {
 
 
 const Button = ({ value }) => {
-  return <button className={`${getStyleName(value)} button`}>{value}</button>;
+
+  const handleBtnClick = () => {
+    console.log(value);
+  }
+
+
+  return <button 
+  onClick={handleBtnClick}
+  className={`${getStyleName(value)} button`}>{value}</button>;
 };
 
 export default Button;
