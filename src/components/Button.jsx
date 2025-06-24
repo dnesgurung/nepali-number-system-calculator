@@ -11,14 +11,14 @@ const getStyleName = (btn) => {
     "/": "opt",
   };
 
-  return className[btn];
+  return className[btn] || "";
 };
 
 const Button = ({ value }) => {
   const { calc, setCalc } = useContext(CalcContext);
 
   // User click dot
-  const dotClick = () => {
+  const handleDotClick = () => {
     setCalc({
       ...calc,
       num: !calc.num.toString().includes(".") ? calc.num + value : calc.num,
@@ -27,7 +27,7 @@ const Button = ({ value }) => {
 
   // User Click AC
   const resetClick = () => {
-    setCalc({ sign: "0", num: 0, res: 0 });
+    setCalc({ sign: "", num: 0, res: 0 });
   };
 
   // user click number
@@ -49,7 +49,7 @@ const Button = ({ value }) => {
 
   // User click operation
 
-  const signClick = () => {
+  const handleSignClick = () => {
     setCalc({
       sign: value,
       res: !calc.res && calc.num ? calc.num : calc.res,
@@ -88,16 +88,28 @@ const Button = ({ value }) => {
 
   }
 
+  // user clicks C
+  const handleClearClick = () => {
+    const current = calc.num.toString();
+    const newValue = current.length > 1 ? current.slice(0, -1) : "0";
+
+    setCalc({
+      ...calc,
+      num: newValue,
+    })
+  }
+
   const handleBtnClick = () => {
     const results = {
-      ".": dotClick,
+      ".": handleDotClick,
       AC: resetClick,
-      "/": signClick,
-      X: signClick,
-      "-": signClick,
-      "+": signClick,
+      "/": handleSignClick,
+      X: handleSignClick,
+      "-": handleSignClick,
+      "+": handleSignClick,
       "=": equalsClick,
       "%": percentClick,
+      "C": handleClearClick,
     };
     if (results[value]) {
       return results[value]();
