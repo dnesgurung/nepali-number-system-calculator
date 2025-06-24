@@ -4,6 +4,7 @@ import "./App.css";
 import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
 import CalcProvider from "./context/CalcContext";
+import Toggle from "./components/Toggle";
 
 const btnValues = [
   ["C", "AC", "%", "/"],
@@ -18,9 +19,7 @@ function App() {
     <CalcProvider>
       <Wrapper>
         <Screen />
-        <div className="gap">
-
-        </div>
+        <Toggle />
         <ButtonBox>
           {btnValues.flat().map((btn, i) => (
           <Button 
