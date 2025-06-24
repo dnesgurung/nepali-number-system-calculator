@@ -6,7 +6,7 @@ import Button from "./components/Button";
 import CalcProvider from "./context/CalcContext";
 
 const btnValues = [
-  ["C", "AC", "/", "%"],
+  ["C", "AC", "%", "/"],
   [7, 8, 9, "X"],
   [4, 5, 6, "-"],
   [1, 2, 3, "+"],
@@ -18,6 +18,9 @@ function App() {
     <CalcProvider>
       <Wrapper>
         <Screen />
+        <div className="gap">
+
+        </div>
         <ButtonBox>
           {btnValues.flat().map((btn, i) => (
           <Button 
