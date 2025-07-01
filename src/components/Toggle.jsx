@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CalcContext } from "../context/CalcContext";
+
 
 function Toggle() {
-  const [toggled, setToggled] = useState(false);
+const {toggleNumberSystem, numberSystem} = useContext(CalcContext)
 
   return (
     <div className="toggle-container">
         <span className="eng">ENG</span>
       <button
-        className={`toggle-btn ${toggled ? "toggled" : ""}`}
-        onClick={() => setToggled(!toggled)}
+        className={`toggle-btn ${numberSystem === 'en-IN' ? "toggled" : ""}`}
+        onClick={toggleNumberSystem}
       >
         <div className="thumb"></div>
       </button>
