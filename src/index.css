@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  height:  100vh;
+body {
+  height: 100vh;
   background: #f4f4f4;
   display: flex;
   align-items: center;
@@ -15,13 +15,13 @@ body{
   font-family: "WDXL Lubrifont JP N", sans-serif;
 }
 
-.wrapper{
+.wrapper {
   background: #dfdfdf;
   width: 20rem;
   padding: 2rem;
   margin-top: 4rem;
   border-radius: 1rem;
-  box-shadow: 9px 12px 20px 8px rgba(0,0,0,0.1);
+  box-shadow: 9px 12px 20px 8px rgba(0, 0, 0, 0.1);
 }
 
 .screen {
@@ -30,16 +30,16 @@ body{
   border-color: rgba(66, 66, 66, 0.835);
   border-style: solid;
   border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.buttonBox{
+.buttonBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  
-
 }
 
-.button{
+.button {
   background: #e9f0f4;
   height: 3.5rem;
   padding: 10px;
@@ -50,27 +50,28 @@ body{
   cursor: pointer;
   color: #242424;
   font-size: 1.5rem;
-
 }
 
-.button:hover{
-  border: 2px  #242424;
+.button:hover {
+  background-color: #cae8e0;
 }
 
-.plus{
+.button:active {
+  background-color: #69c6af;
+  transform: translateY(4px);
+}
+.plus {
   background: #4bd085;
 }
 
 .opt {
-  background : #f79505
+  background: #f79505;
 }
-
-
 
 /* toggle button */
 
 .toggle-btn {
-  background-color:  #b7b9ba;
+  background-color: #b7b9ba;
   border: 1px solid #aaa;
   border-radius: 99px;
   width: 50px;
@@ -82,8 +83,8 @@ body{
   position: relative;
 }
 
-.toggle-btn .thumb{
-  height:  20px;
+.toggle-btn .thumb {
+  height: 20px;
   width: 20px;
   background-color: #fff;
   border-radius: 99px;
@@ -95,18 +96,18 @@ body{
   transform: translateY(-50%);
 }
 
-.toggle-btn.toggled{
+.toggle-btn.toggled {
   background-color: #15b58e;
 }
 
-.toggle-btn:hover{
+.toggle-btn:hover {
   border-color: #6f6f6f;
 }
 
-.toggle-btn.toggled .thumb{
+.toggle-btn.toggled .thumb {
   left: calc(50px - 25px);
 }
 
-.toggle-container{
+.toggle-container {
   flex-direction: column;
 }
