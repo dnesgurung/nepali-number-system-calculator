@@ -13,9 +13,20 @@ const Screen = () => {
   return new Intl.NumberFormat(numberSystem).format(parsed);
 }
   return (
+    <div className="screen-container">
+      <div className="solar-panel">
+        <div className="solar-cell"></div>
+        <div className="solar-cell"></div>
+        <div className="solar-cell"></div>
+        <div className="solar-cell"></div>
+        <div className="solar-cell"></div>
+      </div>
+
+
   <Textfit className="screen" max={50} mode="single">
     {formatNumber(calc.num ? calc.num : calc.res)}
     </Textfit>
+    </div>
 )
 };
 

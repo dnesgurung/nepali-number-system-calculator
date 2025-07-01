@@ -62,6 +62,8 @@ body {
 }
 .plus {
   background: #4bd085;
+  grid-row: span 2;
+  height: auto;
 }
 
 .opt {
@@ -111,3 +113,30 @@ body {
 .toggle-container {
   flex-direction: column;
 }
+
+.solar-panel{
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 5px 10px;
+  background: #333;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+.solar-cell{
+  width: 12px;
+  height: 20px;
+  background: #111;
+  border: 1px solid #000;
+  border-radius: 1px;
+}
+
+.equals{
+  background: #aaa;
+}
+
+.equals:hover{
+  background: #735e5e;
+}
+
