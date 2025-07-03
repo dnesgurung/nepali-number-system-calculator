@@ -140,3 +140,19 @@ body {
   background: #735e5e;
 }
 
+.clear {
+background: #fc3d3d
+}
+
+.clear:hover{
+  background: #fc3d3d;
+  opacity: 0.8;
+}
+.all-clear{
+  background: #fc3d3d;
+}
+
+.all-clear:hover{
+  background: #fc3d3d;
+  opacity: 0.8;
+}

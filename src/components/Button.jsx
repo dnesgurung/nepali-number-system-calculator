@@ -9,6 +9,8 @@ const getStyleName = (btn) => {
     "%": "opt",
     "+": "plus",
     "/": "opt",
+    "C": 'clear',
+    "AC": 'all-clear'
   };
 
   return className[btn] || "";
